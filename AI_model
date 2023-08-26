@@ -1,0 +1,16 @@
+!pip install -U spacy
+!pip install scispacy
+pip install render
+import scispacy
+import spacy
+#Core models
+import en_core_sci_sm
+import en_core_sci_md
+#NER specific models
+import en_ner_bc5cdr_md
+#Tools for extracting & displaying data
+from spacy import displacy
+import pandas as pd
+
+# Pick specific transcription to use (row 3, column "transcription") and test the scispacy NER model
+text = mtsample_df.loc[10, "transcription"]
